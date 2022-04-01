@@ -24,8 +24,8 @@ class Animal {
 class Passaro extends Animal {
   public _bico: string;
 
-  constructor(bico: string) {
-    super('Verde', 25, 350); // super recebe 'Verde', 25, 350, que é passado para o construtor da classe pai
+  constructor(bico: string, cor: string, tamanho: number, peso: number) {
+    super(cor, tamanho, peso); // super recebe 'Verde', 25, 350, que é passado para o construtor da classe pai
     this._bico = bico;
   }
 
@@ -37,8 +37,8 @@ class Passaro extends Animal {
 class Papagaio extends Passaro {
   public _sabeFalar: boolean;
 
-  constructor(sabeFalar: boolean) {
-    super('Médio'); // super recebe 'Médio', que é passado no parâmetro da classe superior (passaro)
+  constructor(sabeFalar: boolean, cor: string, tamanho: number, peso: number) {
+    super('Médio', cor, tamanho, peso); // super recebe 'Médio', que é passado no parâmetro da classe superior (passaro)
     this._sabeFalar = sabeFalar;
   }
 
@@ -47,5 +47,8 @@ class Papagaio extends Passaro {
   }
 }
 
-let papagaio = new Papagaio(true);
+let papagaio = new Papagaio(true, 'Verde', 25, 350);
 console.log(papagaio);
+
+let papagaio2 = new Papagaio(false, 'Verde e Amarelo', 22, 300);
+console.log(papagaio2);
