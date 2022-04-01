@@ -16,10 +16,12 @@ Na class SUB, dentro do constructor, será preciso utilizar, antes dos this. o s
 class Animal {
   public _cor: string;
   public _tamanho: number | null;
+  public _peso: number | null;
 
   constructor() {
     this._cor = '';
     this._tamanho = null;
+    this._peso = null;
   }
 
   dormir() {
@@ -74,5 +76,7 @@ let cachorro = new Cachorro();
 let passaro = new Passaro();
 let papagaio = new Papagaio();
 
-cachorro.dormir();
-papagaio.voar();
+// cachorro.dormir();
+// papagaio.voar();
+
+console.log(passaro);
