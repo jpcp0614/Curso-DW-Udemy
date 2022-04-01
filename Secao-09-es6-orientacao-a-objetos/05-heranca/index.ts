@@ -6,16 +6,32 @@ TODO Herança
 - Objeto cachorro
 - Objeto pássaro
 
+-> class SUPER
+-> class SUB
+
+Na class SUB, dentro do constructor, será preciso utilizar, antes dos this. o super();
+
 */
 
-class Cachorro {
+class Animal {
   public _cor: string;
-  public _tamanho: number;
+  public _tamanho: number | null;
+
+  constructor() {
+    this._cor = '';
+    this._tamanho = null;
+  }
+
+  dormir() {
+    console.log('Dormir');
+  }
+}
+
+class Cachorro extends Animal {
   public _orelhas: string;
 
   constructor() {
-    this._cor = 'Sal e pimenta';
-    this._tamanho = 30;
+    super();
     this._orelhas = 'Grandes e caídas';
   }
 
@@ -23,37 +39,40 @@ class Cachorro {
     console.log('Correr')
   }
 
-  dormir() {
-    console.log('Dormir')
-  }
-
   rosnar() {
     console.log('Rosnar')
   }
 }
 
-class Passaro {
-  public _cor: string;
-  public _tamanho: number;
+class Passaro extends Animal {
   public _bico: string;
 
   constructor() {
-    this._cor = 'Azul';
-    this._tamanho = 2;
+    super();
     this._bico = 'Curto';
   }
 
   voar() {
     console.log('Voar')
   }
+}
 
-  dormir() {
-    console.log('Dormir')
+class Papagaio extends Passaro {
+  public _sabeFalar: boolean;
+
+  constructor() {
+    super();
+    this._sabeFalar = true;
+  }
+
+  falar() {
+    console.log('Falar')
   }
 }
 
 let cachorro = new Cachorro();
 let passaro = new Passaro();
+let papagaio = new Papagaio();
 
-console.log(cachorro);
-console.log(passaro);
+cachorro.dormir();
+papagaio.voar();
