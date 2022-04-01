@@ -1,0 +1,19 @@
+{
+  "name": "13-construtores-criar-obj",
+  "version": "1.0.0",
+  "description": "Funções construtoras - Criando objetos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node index.js"
+  },
+  "keywords": [],
+  "author": "João Paulo",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.6.3"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.1.8"
+  }
+}
